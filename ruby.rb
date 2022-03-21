@@ -9,14 +9,6 @@ module Components
             @symbol = symbol   
             @@players[@name] = @symbol
         end
-
-        def make_move
-            MakeMove.new
-        end
-
-        def self.players
-            return @@players
-        end
     end
 
     # Board Class
