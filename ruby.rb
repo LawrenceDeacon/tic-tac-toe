@@ -32,6 +32,13 @@ module Components
         end
     end
 
+    class move
+        @@moves = {}
+        def initialize(player,square)
+            @player = player
+            @square = square
+        end
+    end
 end
 
 # Init
