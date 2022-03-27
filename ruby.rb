@@ -10,7 +10,7 @@ module Components
             @@players[@name] = @symbol
         end
 
-        def update(name, symbol)
+        def self.update(name, symbol)
             if name != @@players[name] 
                 @name = name
                 @symbol = symbol   
@@ -40,8 +40,8 @@ end
 board = Components::Board.new
 
 players = Components::Players
-player1 = players.new("Player1", "X")
-player2 = players.new("Player2", "O")
+player1_create = players.new("Player1", "X")
+player2_create = players.new("Player2", "O")
 # # Player1 setup
 # puts "Player 1 enter your name: "
 # player1.name = gets 
@@ -55,5 +55,5 @@ player2 = players.new("Player2", "O")
 
 # Testing purposes
 puts players.players
-player1.update("Bob", player1.symbol)
+players.update(player1_create.name,"B")
 puts players.players
