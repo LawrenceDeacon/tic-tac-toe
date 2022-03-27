@@ -21,8 +21,6 @@ module Components
         def self.players
             return @@players
         end
-
-        
     end
 
     class Board
@@ -40,20 +38,22 @@ end
 board = Components::Board.new
 
 players = Components::Players
-player1_create = players.new("Player1", "X")
-player2_create = players.new("Player2", "O")
 # # Player1 setup
 # puts "Player 1 enter your name: "
-# player1.name = gets 
+# player1_name = gets.chomp 
 # puts "Player 1 enter your choice of Symbol: "
-# player1.symbol = gets 
+# player1_symbol = gets.chomp 
+# player1 = players.new(player1_name,player1_symbol)
 # # Player2 setup
 # puts "Player 2 enter your name: "
-# player2.name = gets 
+# player2_name = gets.chomp
 # puts "Player 2 enter your choice of Symbol: "
-# player2.symbol = gets 
+# player2_symbol = gets.chomp
+# player2 = players.new(player2_name,player2_symbol)
+# #Updates players
 
 # Testing purposes
-puts players.players
-players.update(player1_create.name,"B")
+player1 = players.new("Lawrence","X")
+player2 = players.new("Lisa","O")
+
 puts players.players
